@@ -43,7 +43,7 @@ WhatsApp: ${waValue}
 
 
 document.getElementById('ctaWa').addEventListener('click', () => {
-    window.open('https://wa.me/996771?text=Здравствуйте!%20Я%20по%20поводу%20тура...', '_blank');
+    window.open('https://wa.me/996771133194?text=Здравствуйте!%20Я%20по%20поводу%20тура...', '_blank');
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
