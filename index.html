@@ -23,12 +23,12 @@
 
             <div style="display:flex;align-items:center;gap:10px;margin-left:10px">
                 <button id="themeToggle" class="btn secondary">🌙</button>
-                <div class="language-switcher" id="langSwitcher" data-en="RU" >EN</div>
+                <div class="language-switcher" id="langSwitcher" data-en="RU">EN</div>
             </div>
         </div>
     </header>
 
-    
+
     <section class="hero fade-in" id="home">
         <div class="container">
             <div class="grid">
@@ -66,20 +66,20 @@
 
             <div class="cards fade-in">
                 <article class="card">
-                    <img src="../img/horse-tour-ketmen-e1671558551342.jpeg"
-                        alt="">
+                    <img src="../img/horse-tour-ketmen-e1671558551342.jpeg" alt="">
                     <h3 data-en="Horse Tour">Конный тур</h3>
                     <p class="muted" data-en="1–10 days · Horses · Nomadic experience">1–10 дней · Лошади · Кочевой опыт
                     </p>
                     <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px">
                         <div class="price" data-en="Negotiable">Договорная</div>
+                        <button class="btn secondary" data-en="More">Подробнее</button>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    
+
     <section class="section fade-in" id="why" style="padding-top:24px;padding-bottom:36px">
         <div class="container">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
@@ -120,7 +120,7 @@
         </div>
     </section>
 
-    
+
     <section class="section fade-in" id="contact" style="padding-bottom:36px">
         <div class="container">
             <h2 data-en="Contact Us">Связаться с нами</h2>
@@ -164,7 +164,7 @@
         </div>
     </section>
 
-    
+
     <footer>
         <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:20px">
             <div>
@@ -173,10 +173,47 @@
             </div>
         </div>
     </footer>
-    
-    <script src="./script.js"></script>
 
+
+
+    <div id="scheduleModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>График туров</h3>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Маршрут</th>
+                        <th>Длительность</th>
+                        <th>Стоимость</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1–4 мая</td>
+                        <td>Иссык-Куль — Сон-Куль</td>
+                        <td>4 дня</td>
+                        <td>Договорная</td>
+                    </tr>
+                    <tr>
+                        <td>10–13 июня</td>
+                        <td>Чон-Кемин — Каркыра</td>
+                        <td>4 дня</td>
+                        <td>Договорная</td>
+                    </tr>
+                    <tr>
+                        <td>20–23 июля</td>
+                        <td>Ош — Сары-Челек</td>
+                        <td>4 дня</td>
+                        <td>Договорная</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
-

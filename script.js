@@ -166,3 +166,22 @@ toggleButton.addEventListener('click', () => {
     const newTheme = currentTheme === 'dark-theme' ? 'light-theme' : 'dark-theme';
     setTheme(newTheme);
 });
+
+// Открытие и закрытие модального окна
+const modal = document.getElementById('scheduleModal');
+const btns = document.querySelectorAll('.card .btn.secondary');
+const closeBtn = document.querySelector('.close');
+
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', e => {
+  if (e.target === modal) modal.style.display = 'none';
+});
