@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title data-en="Kyrgyz Travel — example landing page">Kyrgyz Travel — пример лендинга</title>
+    <title data-en="Flex Travel KG — adventure tours in Kyrgyzstan">Flex Travel KG — туры по Кыргызстану</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -14,118 +14,455 @@
     <header>
         <div class="container header-inner">
             <a class="logo" href="#">
-                <span class="mark">KT</span>
+                <span class="mark">FT</span>
                 <span>
-                    <div style="font-size:14px;color:var(--muted);font-weight:600">Kyrgyz</div>
-                    <div style="font-size:16px;margin-top:-6px">Travel Co.</div>
+                    <div style="font-size:14px;color:var(--muted);font-weight:600" data-en="Flex">Flex</div>
+                    <div style="font-size:16px;margin-top:-6px" data-en="Travel KG">Travel KG</div>
                 </span>
             </a>
 
             <div style="display:flex;align-items:center;gap:10px;margin-left:10px">
-                <button id="themeToggle" class="btn secondary">🌙</button>
+                <button id="themeToggle" class="btn secondary">
+                    <span class="icon">🌙</span>
+                </button>
                 <div class="language-switcher" id="langSwitcher" data-en="RU">EN</div>
             </div>
         </div>
     </header>
 
 
+    <!-- HERO / INTRO -->
     <section class="hero fade-in" id="home">
         <div class="container">
             <div class="grid">
                 <div class="hero-left">
-                    <div class="eyebrow pill" data-en="Explore Kyrgyzstan">Explore Kyrgyzstan</div>
+                    <div class="eyebrow pill" data-en="Horse Trekking">Конный трекинг</div>
 
-                    <h1 data-en="Traveling in Kyrgyzstan — natural wonders and nomadic culture">
-                        Путешествия по Кыргызстану — природные чудеса и кочевая культура
+                    <h1 data-en="Horse Trekking to Song Kul Lake in Kyrgyzstan">
+                        Конный тур на озеро Сон-Куль в Кыргызстане
                     </h1>
 
-                    <p class="lead"
-                        data-en="We organize expeditions, horseback tours, and cultural programs. Small groups, experienced guides, authentic experience.">
-                        Организуем экспедиции, конные туры и культурные программы. Малые группы, опытные гиды,
-                        аутентичный опыт.
+                    <p class="lead" data-en="Experience the Nomadic Life of Kyrgyzstan">
+                        Почувствуйте настоящую жизнь кочевников Кыргызстана
                     </p>
 
                     <div class="hero-ctas">
-                        <button class="btn" id="down" data-en="Contact">Связаться</button>
+                        <button class="btn" id="down" data-en="Explore Tours">Изучить туры</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section fade-in" id="tours">
+    <!-- WELCOME / INTRODUCTION -->
+    <section class="section fade-in" id="welcome">
         <div class="container">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
+            <h2 data-en="Welcome to Song Kul Lake">Добро пожаловать на озеро Сон-Куль</h2>
+
+            <div class="content-grid">
                 <div>
-                    <h2 data-en="Our Tours">Наши туры</h2>
-                    <p class="muted" data-en="Expeditions, horseback trips, family programs and custom routes">
-                        Экспедиции, конные походы, семейные программы и индивидуальные маршруты
+                    <p data-en="Song Kul Lake sits at 3,016 meters above sea level in the heart of the Tian Shan mountains. Here, there are no cars, no crowds, no hotels — only vast alpine meadows, nomadic families, and the sound of nature.">
+                        Озеро Сон-Куль находится на высоте 3016 метров над уровнем моря в сердце гор Тянь-Шань. Здесь нет автомобилей, нет толп туристов, нет отелей — только бескрайние альпийские луга, кочевые семьи и звуки природы.
+                    </p>
+
+                    <p data-en="You'll sleep in traditional yurts, ride horses across mountains, and experience daily nomadic life: milking yaks, making butter, and sitting by campfires under endless stars.">
+                        Вы будете спать в традиционных юртах, ездить верхом на лошадях через горы и переживать повседневную жизнь кочевников: дойку яков, приготовление масла и сидение у костров под бесконечными звёздами.
+                    </p>
+
+                    <p data-en="This is not a tourist attraction. This is a real experience in a place where time moves differently.">
+                        Это не туристический аттракцион. Это настоящее приключение в месте, где время течёт иначе.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY TRAVEL WITH US -->
+    <section class="section fade-in" id="why-travel">
+        <div class="container">
+            <h2 data-en="Why Travel With Us">Почему путешествуют с нами</h2>
+
+            <div class="story-content">
+                <p data-en="My parents first came to Song Kul Lake thirty years ago. My father fell in love with a nomadic family, their yurts, their horses, and their way of life. He couldn't stay in the city after that.">
+                    Мои родители впервые приехали на озеро Сон-Куль тридцать лет назад. Мой отец влюбился в кочевую семью, их юрты, лошадей и образ жизни. После этого он не смог остаться в городе.
+                </p>
+
+                <p data-en="I was born and raised on horseback, surrounded by shepherds and mountains. I learned to understand horses, mountains, and nomadic culture from childhood.">
+                    Я родился и вырос верхом на лошади, окружённый пастухами и горами. С детства я научился понимать лошадей, горы и кочевую культуру.
+                </p>
+
+                <p data-en="Now I organize tours because I want to share this world with people who truly want to understand it. Not just see it from a car window. I want you to live it.">
+                    Теперь я организую туры, потому что хочу поделиться этим миром с людьми, которые действительно хотят его понять. Не просто увидеть из окна машины. Я хочу, чтобы вы его пережили.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT MAKES THIS DIFFERENT -->
+    <section class="section fade-in" id="what-different">
+        <div class="container">
+            <h2 data-en="What Makes This Tour Different">Чем этот тур отличается от других</h2>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 24px;">
+                <div>
+                    <h3 data-en="What Most Tourists See">Что видят большинство туристов</h3>
+                    <p class="muted" data-en="They stop at Song Kul for 30 minutes on the way from one place to another. They see the lake from a car window, take a photo, and leave. They don't understand what they saw.">
+                        Они останавливаются на озере на 30 минут между другими местами. Видят озеро из окна машины, фотографируют и уезжают. Они не понимают, что видели.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 data-en="What You'll Experience">Что вы переживёте с нами</h3>
+                    <p class="muted" data-en="You'll spend 3 to 7 days living with nomadic families. You'll ride for hours, learn about their lives, eat from their tables, and become part of their world. You'll leave with stories, not just photos.">
+                        Вы проведёте 3–7 дней, живя с кочевыми семьями. Будете ездить верхом часами, учиться их жизни, есть из их столов и стать частью их мира. Вы уедете с историями, а не просто фотографиями.
                     </p>
                 </div>
             </div>
 
-            <div class="cards fade-in">
-                <article class="card">
-                    <img src="../img/horse-tour-ketmen-e1671558551342.jpeg" alt="">
-                    <h3 data-en="Horse Tour">Конный тур</h3>
-                    <p class="muted" data-en="1–10 days · Horses · Nomadic experience">1–10 дней · Лошади · Кочевой опыт
-                    </p>
-                    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:14px">
-                        <div class="price" data-en="Negotiable">Договорная</div>
-                        <button class="btn secondary" data-en="More">Подробнее</button>
+            <div class="features-list" style="margin-top: 36px;">
+                <div class="feature">✓ <span data-en="No cars — only horses">Без машин — только лошади</span></div>
+                <div class="feature">✓ <span data-en="No crowds — just authentic nomadic families">Без толп — только настоящие кочевые семьи</span></div>
+                <div class="feature">✓ <span data-en="No hotels — sleep in traditional yurts">Без отелей — спите в традиционных юртах</span></div>
+                <div class="feature">✓ <span data-en="No tight schedule — experience life at nomadic pace">Без жёсткого расписания — живите в темпе кочевников</span></div>
+                <div class="feature">✓ <span data-en="Experienced guides who understand both worlds">Опытные гиды, которые понимают оба мира</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHOOSE YOUR ADVENTURE - INTERACTIVE TABS -->
+    <section class="section fade-in" id="choose-adventure">
+        <div class="container">
+            <h2 data-en="Choose Your Adventure">Выберите своё приключение</h2>
+            <p class="muted" data-en="Select the perfect tour length for you">Выберите идеальную длину тура для вас</p>
+
+            <div class="tours-tabs" style="margin-top: 36px;">
+                <!-- Tour List -->
+                <div class="tour-list">
+                    <button class="tour-tab active" data-tour="3day" data-en="3-Day Horse Trek to Song Kul Lake">
+                        3-дневный конный тур на Сон-Куль
+                    </button>
+                    <button class="tour-tab" data-tour="4day" data-en="4-Day Horse Trek to Song Kul Lake">
+                        4-дневный конный тур на Сон-Куль
+                    </button>
+                    <button class="tour-tab" data-tour="week" data-en="One Week Living Like a Nomad">
+                        Неделя жизни как настоящий кочевник
+                    </button>
+                </div>
+
+                <!-- Tour Details -->
+                <div class="tour-details">
+                    <!-- 3-Day Tour -->
+                    <div class="tour-content active" id="tour-3day">
+                        <h3 data-en="3-Day Horse Trek to Song Kul Lake">3-дневный конный тур на озеро Сон-Куль</h3>
+                        <p data-en="The perfect introduction to Song Kul Lake and nomadic life. Three days of unforgettable mountain riding, authentic experiences, and natural beauty.">
+                            Идеальное введение в озеро Сон-Куль и кочевую жизнь. Три дня незабываемого горного верховой езды, аутентичного опыта и природной красоты.
+                        </p>
+
+                        <h4 style="margin-top: 20px;" data-en="Itinerary">Программа</h4>
+                        <div class="itinerary">
+                            <div class="day">
+                                <h5 data-en="Day 1: Kyzart → Ozbek Valley → Song Kul Lake">День 1: Кызарт → Долина Озбек → Озеро Сон-Куль</h5>
+                                <p data-en="We start early from Kyzart village. The first ride takes us through mountain meadows and forests. You'll see the landscape change as we climb higher. By evening, we reach Song Kul Lake and settle into a nomadic family's yurt. First experience of nomadic hospitality.">
+                                    Мы начинаем рано утром из деревни Кызарт. Первая поездка ведёт нас через горные луга и леса. Вы увидите, как меняется ландшафт по мере подъёма. К вечеру мы доходим до озера Сон-Куль и поселяемся в юрте кочевой семьи. Первый опыт кочевого гостеприимства.
+                                </p>
+                            </div>
+
+                            <div class="day">
+                                <h5 data-en="Day 2: Song Kul Lake → Kara Kyia">День 2: Сон-Куль → Кара-Кыя</h5>
+                                <p data-en="A full day of riding along the lake shore. You'll meet other nomadic families, understand their daily routines, and help with basic tasks. The evening brings a bonfire and stories under the stars.">
+                                    Полный день верховой езды вдоль берега озера. Вы встретитесь с другими кочевыми семьями, поймёте их распорядок дня и поможете в простых делах. Вечер приносит костёр и истории под звёздами.
+                                </p>
+                            </div>
+
+                            <div class="day">
+                                <h5 data-en="Day 3: Kara Kyia → Kyzart">День 3: Кара-Кыя → Кызарт</h5>
+                                <p data-en="The final ride back down the mountain. You'll have time to reflect on your experience and say goodbye to the families. We return to Kyzart by evening with unforgettable memories.">
+                                    Последняя поездка вниз с горы. У вас будет время поразмышлять о своём опыте и попрощаться с семьями. Мы возвращаемся в Кызарт к вечеру с незабываемыми воспоминаниями.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p style="margin-top: 20px; font-weight: 600;" data-en="Duration">Продолжительность</p>
+                        <p class="muted" data-en="3 days, 2 nights">3 дня, 2 ночи</p>
+
+                        <p style="margin-top: 10px; font-weight: 600;" data-en="Best For">Лучше всего для</p>
+                        <p class="muted" data-en="Those with some hiking experience who want a quick introduction to Song Kul">Тех, кто имеет опыт в пешком туризме и хочет быстро познакомиться с Сон-Кулем</p>
                     </div>
-                </article>
+
+                    <!-- 4-Day Tour -->
+                    <div class="tour-content" id="tour-4day">
+                        <h3 data-en="4-Day Horse Trek to Song Kul Lake">4-дневный конный тур на озеро Сон-Куль</h3>
+                        <p data-en="This extended tour gives you more time to adapt to horseback riding, understand nomadic culture deeper, and explore more of the lake's surroundings.">
+                            Этот расширенный тур даёт вам больше времени, чтобы привыкнуть к верховой езде, глубже понять кочевую культуру и изучить больше окрестностей озера.
+                        </p>
+
+                        <h4 style="margin-top: 20px;" data-en="Itinerary">Программа</h4>
+                        <div class="itinerary">
+                            <div class="day">
+                                <h5 data-en="Day 1: Kyzart → Ozbek Valley → Song Kul Lake">День 1: Кызарт → Долина Озбек → Озеро Сон-Куль</h5>
+                                <p data-en="Same as the 3-day tour. We start early and ride through changing landscapes until we reach the lake and a nomadic family's yurt for the night.">
+                                    Как и в 3-дневном туре. Мы начинаем рано и ездим через меняющиеся пейзажи, пока не достигнем озера и юрты кочевой семьи на ночь.
+                                </p>
+                            </div>
+
+                            <div class="day">
+                                <h5 data-en="Day 2: Song Kul Lake → Kara Kyia">День 2: Сон-Куль → Кара-Кыя</h5>
+                                <p data-en="A full day of riding along the lake. You'll participate in daily nomadic activities and enjoy traditional meals with your host family.">
+                                    Полный день верховой езды вдоль озера. Вы будете участвовать в ежедневных кочевых делах и наслаждаться традиционными блюдами с хозяевами.
+                                </p>
+                            </div>
+
+                            <div class="day">
+                                <h5 data-en="Day 3: Kara Kyia → Kilemche Valley">День 3: Кара-Кыя → Долина Килемче</h5>
+                                <p data-en="We explore new routes and reach Kilemche Valley. This day gives you extra experience in long-distance riding and introduces you to different nomadic groups and landscapes.">
+                                    Мы исследуем новые маршруты и доходим до долины Килемче. Этот день даёт вам дополнительный опыт дальних верховых прогулок и знакомит вас с разными кочевыми группами.
+                                </p>
+                            </div>
+
+                            <div class="day">
+                                <h5 data-en="Day 4: Kilemche Valley → Kyzart">День 4: Килемче → Кызарт</h5>
+                                <p data-en="The final descent back to Kyzart. With more time spent in the mountains, you'll feel more confident on horseback and more connected to this world.">
+                                    Окончательный спуск обратно в Кызарт. Проведя больше времени в горах, вы будете чувствовать себя увереннее в верховой езде и более связанными с этим миром.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p style="margin-top: 20px; font-weight: 600;" data-en="Duration">Продолжительность</p>
+                        <p class="muted" data-en="4 days, 3 nights">4 дня, 3 ночи</p>
+
+                        <p style="margin-top: 10px; font-weight: 600;" data-en="Best For">Лучше всего для</p>
+                        <p class="muted" data-en="Those who want deeper immersion and exploration of different valleys">Тех, кто хочет более глубокого погружения и исследования разных долин</p>
+                    </div>
+
+                    <!-- Week Tour -->
+                    <div class="tour-content" id="tour-week">
+                        <h3 data-en="One Week Living Like a Nomad">Неделя жизни как настоящий кочевник</h3>
+                        <p data-en="Seven days and nights with nomadic families. You won't be a tourist anymore — you'll be part of their life. You'll stop just visiting and start living.">
+                            Семь дней и ночей с кочевыми семьями. Вы перестанете быть туристом — вы станете частью их жизни. Вы перестанете просто посещать и начнёте жить.
+                        </p>
+
+                        <h4 style="margin-top: 20px;" data-en="What's Included">Что входит</h4>
+                        <div style="margin: 16px 0;">
+                            <div data-en="✓ Accommodation in traditional yurts with nomadic families">✓ Проживание в традиционных юртах с кочевыми семьями</div>
+                            <div data-en="✓ All meals prepared by nomadic families (traditional Kyrgyz cuisine)">✓ Все блюда, приготовленные кочевыми семьями (традиционная кыргызская кухня)</div>
+                            <div data-en="✓ Horse riding equipment and experienced guides">✓ Оборудование для верховой езды и опытные гиды</div>
+                            <div data-en="✓ Participation in daily nomadic activities (herding, milking, cooking, etc.)">✓ Участие в ежедневных кочевых делах (пастьба, дойка, приготовление еды и т.д.)</div>
+                            <div data-en="✓ Time to rest, reflect, and simply be">✓ Время отдыха, размышления и просто бытия</div>
+                            <div data-en="✓ Stories, laughter, and connection with real people">✓ Истории, смех и связь с настоящими людьми</div>
+                        </div>
+
+                        <h4 style="margin-top: 20px;" data-en="No Fixed Schedule">Без жёсткого расписания</h4>
+                        <p data-en="We don't have a strict schedule. Some days you'll ride for hours, some days you'll stay in one place and help with daily tasks. Some evenings you'll sit by the fire, other mornings you'll wake up with the shepherds. You adapt to their rhythm.">
+                            У нас нет жёсткого расписания. Некоторые дни вы будете ездить часами, другие дни вы останетесь на месте и поможете с ежедневными делами. Некоторые вечера вы будете сидеть у костра, другие утра вы проснётесь с пастухами. Вы адаптируетесь к их ритму.
+                        </p>
+
+                        <h4 style="margin-top: 20px;" data-en="You Stop Being a Tourist">Вы перестаёте быть туристом</h4>
+                        <p data-en="By the end of the week, you won't ask 'How long until we go back to the hotel?' You'll ask 'Do we have to leave?' You'll understand what it means to live in the mountains, to depend on horses and the weather, to find joy in simple things.">
+                            К концу недели вы не будете спрашивать "Когда нам вернуться в отель?" Вы будете спрашивать "Мы должны уйти?" Вы поймёте, что значит жить в горах, зависеть от лошадей и погоды, находить радость в простых вещах.
+                        </p>
+
+                        <p style="margin-top: 20px; font-weight: 600;" data-en="Duration">Продолжительность</p>
+                        <p class="muted" data-en="7 days, 6 nights">7 дней, 6 ночей</p>
+
+                        <p style="margin-top: 10px; font-weight: 600;" data-en="Best For">Лучше всего для</p>
+                        <p class="muted" data-en="Those seeking a true transformation and real connection with nomadic culture">Тех, кто ищет настоящую трансформацию и реальную связь с кочевой культурой</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NO RIDING EXPERIENCE -->
+    <section class="section fade-in" id="no-experience">
+        <div class="container">
+            <h2 data-en="No Horse Riding Experience?">Нет опыта верховой езды?</h2>
+            <p class="muted" data-en="That's not a problem at all">Совсем не проблема</p>
+
+            <div class="content-grid" style="margin-top: 24px;">
+                <div>
+                    <p data-en="Most of our guests have never ridden horses before. The Kyrgyz horses are calm, well-trained, and accustomed to tourists. Our guides teach you the basics and ride with you every step of the way.">
+                        Большинство наших гостей никогда не ездили верхом. Кыргызские лошади спокойные, хорошо тренированные и привыкшие к туристам. Наши гиды учат вас основам и ездят с вами на каждом этапе.
+                    </p>
+
+                    <p style="margin-top: 16px;" data-en="After the first day, your body will adjust. By the second day, you'll feel more confident. By the third day, you'll realize you're not thinking about it anymore — you're just riding.">
+                        К концу первого дня ваше тело привыкнет. На второй день вы будете чувствовать себя увереннее. На третий день вы поймёте, что не думаете об этом — вы просто ездите.
+                    </p>
+
+                    <p style="margin-top: 16px;" data-en="Horseback riding is one of humanity's oldest skills. Your body remembers it, even if your mind doesn't.">
+                        Верховая езда — один из самых древних человеческих навыков. Ваше тело помнит это, даже если ваш ум нет.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
 
-    <section class="section fade-in" id="why" style="padding-top:24px;padding-bottom:36px">
+    <!-- WHAT'S INCLUDED -->
+    <section class="section fade-in" id="whats-included">
         <div class="container">
-            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
+            <h2 data-en="What's Included">Что входит в стоимость</h2>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 24px;">
                 <div>
-                    <h2 data-en="Why Choose Us">Почему именно мы</h2>
-                    <p class="muted" data-en="Experienced guides, safety and authenticity">Опытные гиды, безопасность и
-                        аутентичность</p>
+                    <h4 data-en="Tour">Тур</h4>
+                    <ul>
+                        <li data-en="Horseback riding equipment">✓ Оборудование для верховой езды</li>
+                        <li data-en="Guide (Kyrgyz or English speaking)">✓ Гид (говорящий на кыргызском или английском)</li>
+                        <li data-en="Helper/assistant guide">✓ Помощник/ассистент гида</li>
+                        <li data-en="Additional horse for luggage">✓ Дополнительная лошадь для багажа</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 data-en="Accommodation & Food">Проживание и еда</h4>
+                    <ul>
+                        <li data-en="Stay in traditional yurts">✓ Проживание в традиционных юртах</li>
+                        <li data-en="All meals (breakfast, lunch, dinner)">✓ Все блюда (завтрак, обед, ужин)</li>
+                        <li data-en="Hot tea and snacks">✓ Горячий чай и закуски</li>
+                        <li data-en="Fresh bedding">✓ Чистое постельное белье</li>
+                    </ul>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- WHAT YOU'LL REMEMBER MOST -->
+    <section class="section fade-in" id="remember-most">
+        <div class="container">
+            <h2 data-en="What You'll Remember Most">Что запомнится вам больше всего</h2>
+
+            <div class="memories-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 24px;">
+                <div class="memory">
+                    <h3 data-en="Sunrise Over the Mountains">Восход над горами</h3>
+                    <p data-en="Waking up before dawn inside a yurt. Stepping outside to see the first light touch the peaks. Sitting in silence with only the sound of sheep bells.">
+                        Пробуждение до рассвета внутри юрты. Выход на улицу, чтобы увидеть первый свет на вершинах. Сидение в тишине со звуком только овечьих колокольчиков.
+                    </p>
+                </div>
+
+                <div class="memory">
+                    <h3 data-en="The Horses">Лошади</h3>
+                    <p data-en="How your horse becomes your friend. How it carries you safely over mountain passes. How you realize that trust between human and animal is something very real and very ancient.">
+                        То, как ваша лошадь становится вашим другом. То, как она безопасно несёт вас через горные перевалы. То, как вы понимаете, что доверие между человеком и животным — это что-то очень реальное и очень древнее.
+                    </p>
+                </div>
+
+                <div class="memory">
+                    <h3 data-en="Nomadic Family Stories">Истории кочевых семей</h3>
+                    <p data-en="Conversations by the fire. Learning why they choose this life. Hearing about generations of ancestors who lived the same way. Understanding that this is not just a job for them, it's their identity.">
+                        Разговоры у костра. Узнание того, почему они выбирают эту жизнь. Слышание о поколениях предков, живших так же. Понимание того, что это для них не просто работа, это их идентичность.
+                    </p>
+                </div>
+
+                <div class="memory">
+                    <h3 data-en="Stars Like You've Never Seen">Звёзды, как вы их никогда не видели</h3>
+                    <p data-en="No light pollution. No clouds. Just endless stars. Milky Way so bright you can see shadows. And the realization that you're a very small part of something very large.">
+                        Нет светового загрязнения. Нет облаков. Только бесконечные звёзды. Млечный путь настолько яркий, что вы видите тени. И осознание того, что вы очень маленькая часть чего-то очень большого.
+                    </p>
+                </div>
+
+                <div class="memory">
+                    <h3 data-en="Simple Food, Deep Connection">Простая еда, глубокая связь</h3>
+                    <p data-en="Hot tea made over a fire. Bread baked in embers. Meat slow-cooked for hours. And the realization that food tastes better when you're surrounded by mountains and by people who care.">
+                        Горячий чай, приготовленный на костре. Хлеб, испечённый в углях. Мясо, медленно готовящееся часами. И осознание того, что еда вкуснее, когда вы окружены горами и людьми, которые заботятся.
+                    </p>
+                </div>
+
+                <div class="memory">
+                    <h3 data-en="The Silence">Молчание</h3>
+                    <p data-en="Not the absence of sound, but peace. Hours when you don't need to speak, just ride and think. Hours when your mind stops racing and finally rests. This is rare in modern life.">
+                        Не отсутствие звука, а мир. Часы, когда вам не нужно говорить, просто ездить и думать. Часы, когда ваш ум перестаёт спешить и, наконец, отдыхает. Это редко в современной жизни.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIMITED AVAILABILITY -->
+    <section class="section fade-in" id="limited">
+        <div class="container">
+            <h2 data-en="Limited Availability">Количество мест ограничено</h2>
+
+            <div style="max-width: 600px; margin: 24px auto;">
+                <p data-en="We don't run big group tours. Each group is no more than 6-8 people. This way everyone gets personal attention, we can match the pace to your abilities, and the nomadic families don't feel overwhelmed.">
+                    Мы не организуем большие групповые туры. Каждая группа состоит не более чем из 6-8 человек. Таким образом, каждый получает личное внимание, мы можем соответствовать вашему уровню подготовки, а кочевые семьи не чувствуют себя перегруженными.
+                </p>
+
+                <p style="margin-top: 16px;" data-en="Spots fill up quickly during peak season (June-August). If you're interested, reach out early.">
+                    Места быстро заполняются в пиковый сезон (июнь-август). Если вас интересует, свяжитесь с нами как можно раньше.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US (BADGES) -->
+    <section class="section fade-in" id="why">
+        <div class="container">
+            <h2 data-en="Why Choose Flex Travel KG">Почему выбирают Flex Travel KG</h2>
+            <p class="muted" data-en="What makes us different from other tour operators">Что отличает нас от других туроператоров</p>
 
             <div class="highlights" style="margin-top:16px">
                 <div class="badge">
-                    <div style="font-size:22px;font-weight:800" data-en="Guarantee">Гарантия</div>
-                    <h4 data-en="Safety">Безопасность</h4>
-                    <div class="muted" data-en="Verified routes">Проверенные маршруты</div>
+                    <div style="font-size:22px;font-weight:800" data-en="Experience">Опыт</div>
+                    <h4 data-en="30+ Years">30+ лет</h4>
+                    <div class="muted" data-en="Family tradition in nomadic tourism">Семейная традиция в кочевом туризме</div>
                 </div>
 
                 <div class="badge">
-                    <div style="font-size:22px;font-weight:800" data-en="Service">Сервис</div>
-                    <h4 data-en="Comfort">Комфорт</h4>
-                    <div class="muted" data-en="Comfortable overnight stays and quality food">Комфортные ночёвки и
-                        качественное питание</div>
+                    <div style="font-size:22px;font-weight:800" data-en="Local">Местный</div>
+                    <h4 data-en="Genuine Connection">Настоящая связь</h4>
+                    <div class="muted" data-en="We're part of this world, not just visitors">Мы часть этого мира, не просто гости</div>
                 </div>
 
                 <div class="badge">
-                    <div style="font-size:22px;font-weight:800" data-en="Culture">Культура</div>
-                    <h4 data-en="Authenticity">Аутентичность</h4>
-                    <div class="muted" data-en="Introduction to traditions and crafts">Знакомство с традициями и
-                        ремёслами</div>
+                    <div style="font-size:22px;font-weight:800" data-en="Safety">Безопасность</div>
+                    <h4 data-en="Professional">Профессионально</h4>
+                    <div class="muted" data-en="Experienced guides, tested routes">Опытные гиды, проверенные маршруты</div>
                 </div>
 
                 <div class="badge">
                     <div style="font-size:22px;font-weight:800" data-en="Flexibility">Гибкость</div>
-                    <h4 data-en="Personal approach">Индивидуальный подход</h4>
-                    <div class="muted" data-en="Route selection for your group">Подбор маршрута под вашу группу</div>
+                    <h4 data-en="Your Pace">Ваш темп</h4>
+                    <div class="muted" data-en="We adapt to your abilities and preferences">Мы адаптируемся к вашим способностям</div>
                 </div>
             </div>
         </div>
     </section>
 
 
+    <section class="section fade-in" id="testimonials" style="padding-bottom:36px">
+        <div class="container">
+            <h2 data-en="Guest Reviews">Отзывы гостей</h2>
+            <p class="muted" data-en="What our clients say about their adventures with us">Что говорят наши клиенты о путешествиях с нами</p>
+
+            <div class="testimonials fade-in">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p data-en="Amazing experience! The guides were very knowledgeable and friendly. Highly recommended!">Изумительный опыт! Гиды были знающими и дружелюбными. Очень рекомендую!</p>
+                    <div class="author" data-en="Sarah, USA">Сара, США</div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p data-en="Beautiful landscapes and authentic culture. Best trip ever!">Красивые пейзажи и аутентичная культура. Лучший отпуск в жизни!</p>
+                    <div class="author" data-en="Michael, UK">Майкл, Великобритания</div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p data-en="Professional organization and unforgettable memories. Thank you!">Профессиональная организация и незабываемые впечатления. Спасибо!</p>
+                    <div class="author" data-en="Emma, Germany">Эмма, Германия</div>
+                </div>
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p data-en="Everything was perfect. Highly skilled guides and excellent service throughout the tour.">Всё было идеально. Опытные гиды и отличный сервис на протяжении всего тура.</p>
+                    <div class="author" data-en="David, Australia">Давид, Австралия</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section fade-in" id="contact" style="padding-bottom:36px">
         <div class="container">
             <h2 data-en="Contact Us">Связаться с нами</h2>
-            <p class="muted" data-en="Leave a request — we will select the best tour for you">Оставьте заявку — мы
-                подберём оптимальный тур под вас</p>
+            <p class="muted" data-en="Leave a request — we will select the best tour for you">Оставьте заявку — мы подберём оптимальный тур под вас</p>
 
             <div class="contact-grid" style="margin-top:18px">
                 <div class="form">
@@ -134,31 +471,31 @@
                         <input id="name" type="text" required placeholder="Ваше имя" data-en-placeholder="Your name">
 
                         <label for="email" style="margin-top:10px" data-en="Email">Email</label>
-                        <input id="email" type="email" required placeholder="you@example.com"
-                            data-en-placeholder="you@example.com">
+                        <input id="email" type="email" required placeholder="you@example.com" data-en-placeholder="you@example.com">
 
                         <label for="number" style="margin-top:10px" data-en="WhatsApp">WhatsApp</label>
-                        <input id="number" type="tel" required placeholder="+996 XXX XXX XXX"
-                            data-en-placeholder="+996 XXX XXX XXX">
+                        <input id="number" type="tel" required placeholder="+1 234 567 890" data-en-placeholder="+1 234 567 890">
 
-                        <label for="message" style="margin-top:10px" data-en="Message">Сообщение</label>
-                        <textarea id="message" rows="5" placeholder="Расскажите, что вы хотите"
-                            data-en-placeholder="Tell us what you want"></textarea>
+                        <label for="peopleCount" style="margin-top:10px" data-en="Number of People">Количество человек</label>
+                        <input id="peopleCount" type="text" required placeholder="Например: 2 взрослых, 1 ребенок" data-en-placeholder="E.g.: 2 adults, 1 child">
+
+                        <label for="travelDates" style="margin-top:10px" data-en="Travel Dates">Даты поездки</label>
+                        <input id="travelDates" type="text" required placeholder="Например: 12–18 июля" data-en-placeholder="E.g.: July 12–18">
+
+                        <label for="message" style="margin-top:10px" data-en="Additional Information">Дополнительная информация</label>
+                        <textarea id="message" rows="5" required placeholder="Напишите дополнительные пожелания, вопросы или детали поездки" data-en-placeholder="Write additional wishes, questions or trip details"></textarea>
 
                         <div style="margin-top:12px;display:flex;gap:10px">
                             <button class="btn" type="submit" data-en="Send">Отправить</button>
-                            <button class="btn secondary" type="button" id="ctaWa" data-en="Write in WhatsApp">Написать
-                                в WhatsApp</button>
+                            <button class="btn secondary" type="button" id="ctaWa" data-en="Write in WhatsApp">Написать в WhatsApp</button>
                         </div>
                     </form>
                 </div>
 
-                <aside
-                    style="background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(10,15,20,0.03)">
+                <aside style="background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(10,15,20,0.03)">
                     <h4 data-en="Contacts">Контакты</h4>
                     <p class="muted">Email: flex.travel.kg@gmail.com</p>
-                    <p class="muted">WhatsApp: +996 771 133 194</p>
-                    <p class="muted">Telegram: @taalai_chor</p>
+                    <p class="muted">WhatsApp: +996 702 440 123</p>
                 </aside>
             </div>
         </div>
@@ -168,45 +505,39 @@
     <footer>
         <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:20px">
             <div>
-                <strong>Kyrgyz Travel Co.</strong>
+                <strong data-en="Flex Travel KG">Flex Travel KG</strong>
                 <div class="muted" data-en="© 2025 — All rights reserved">© 2025 — Все права защищены</div>
             </div>
         </div>
     </footer>
 
-
-
     <div id="scheduleModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>График туров</h3>
+            <span class="close" data-en="×">&times;</span>
+            <h3 data-en="Tour Schedule">График туров</h3>
             <table class="schedule-table">
                 <thead>
                     <tr>
-                        <th>Дата</th>
-                        <th>Маршрут</th>
-                        <th>Длительность</th>
-                        <th>Стоимость</th>
+                        <th data-en="Date">Дата</th>
+                        <th data-en="Duration">Длительность</th>
+                        <th data-en="Cost">Стоимость</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1–4 мая</td>
-                        <td>Иссык-Куль — Сон-Куль</td>
-                        <td>4 дня</td>
-                        <td>Договорная</td>
+                        <td data-en="May 1–4">1–4 мая</td>
+                        <td data-en="4 days">4 дня</td>
+                        <td data-en="Negotiable">Договорная</td>
                     </tr>
                     <tr>
-                        <td>10–13 июня</td>
-                        <td>Чон-Кемин — Каркыра</td>
-                        <td>4 дня</td>
-                        <td>Договорная</td>
+                        <td data-en="June 10–13">10–13 июня</td>
+                        <td data-en="4 days">4 дня</td>
+                        <td data-en="Negotiable">Договорная</td>
                     </tr>
                     <tr>
-                        <td>20–23 июля</td>
-                        <td>Ош — Сары-Челек</td>
-                        <td>4 дня</td>
-                        <td>Договорная</td>
+                        <td data-en="July 20–23">20–23 июля</td>
+                        <td data-en="4 days">4 дня</td>
+                        <td data-en="Negotiable">Договорная</td>
                     </tr>
                 </tbody>
             </table>
@@ -214,6 +545,7 @@
     </div>
 
     <script src="./script.js"></script>
+
 </body>
 
 </html>

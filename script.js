@@ -9,29 +9,31 @@ document.querySelectorAll(".fade-in").forEach(el => {
 });
 
 const form = document.getElementById('contactForm');
-form.addEventListener('submit', async (e) => {
+form.addEventListener('submit', async(e) => {
     e.preventDefault();
 
     const nameValue = document.getElementById('name').value;
     const emailValue = document.getElementById('email').value;
     const waValue = document.getElementById('number').value;
-    const messageValue = document.getElementById('message').value;
+    const peopleCountValue = document.getElementById('peopleCount').value;
+    const travelDatesValue = document.getElementById('travelDates').value;
+    const additionalInfoValue = document.getElementById('message').value;
 
     alert('Спасибо! Ваша заявка отправлена.');
 
-    
     try {
         await fetch("https://api.telegram.org/bot8247879526:AAH9HJ9jFI3DVGSZ4GJwBjrygXV-nzzurMQ/sendMessage", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 chat_id: 5332398221,
-                text:
-                    `Новое сообщение с сайта:
+                text: `Новое сообщение с сайта:
 Имя: ${nameValue}
 Email: ${emailValue}
 WhatsApp: ${waValue}
-Сообщение: ${messageValue}`
+Количество человек: ${peopleCountValue}
+Даты поездки: ${travelDatesValue}
+Дополнительная информация: ${additionalInfoValue}`
             })
         });
     } catch (err) {
@@ -43,11 +45,25 @@ WhatsApp: ${waValue}
 
 
 document.getElementById('ctaWa').addEventListener('click', () => {
-    window.open('https://wa.me/996771133194?text=Здравствуйте!%20Я%20по%20поводу%20тура...', '_blank');
+    const emailValue = document.getElementById('email').value;
+    const waValue = document.getElementById('number').value;
+    const peopleCountValue = document.getElementById('peopleCount').value;
+    const travelDatesValue = document.getElementById('travelDates').value;
+    const additionalInfoValue = document.getElementById('message').value;
+
+    const message = `Здравствуйте! Хочу узнать про тур.
+Email: ${emailValue}
+WhatsApp: ${waValue}
+Количество человек: ${peopleCountValue}
+Даты поездки: ${travelDatesValue}
+Дополнительная информация: ${additionalInfoValue}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/996702440123?text=${encodedMessage}`, '_blank');
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
 
         const targetId = this.getAttribute('href');
@@ -60,14 +76,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 behavior: 'smooth'
             });
 
-            
+
             document.querySelector('nav').classList.remove('active');
         }
     });
 });
 
 
-document.getElementById('down').addEventListener('click', function () {
+document.getElementById('down').addEventListener('click', function() {
     window.scrollTo({
         top: document.body.scrollHeight,
         behavior: 'smooth'
@@ -95,14 +111,11 @@ themeToggle.addEventListener("click", () => {
 });
 
 const switcher = document.getElementById("langSwitcher");
-let lang = "ru";
+let lang = "en"; // Автоматически английский при входе
 
-switcher.addEventListener("click", () => {
-    lang = lang === "ru" ? "en" : "ru";
-
+// Функция для переключения языка
+function switchLanguage() {
     document.querySelectorAll("[data-en]").forEach(el => {
-
-        
         if (lang === "en") {
             el.dataset.originalText = el.innerHTML;
             el.innerHTML = el.getAttribute("data-en");
@@ -113,7 +126,6 @@ switcher.addEventListener("click", () => {
         }
     });
 
-    
     document.querySelectorAll("[data-en-placeholder]").forEach(el => {
         if (lang === "en") {
             el.dataset.originalPlaceholder = el.placeholder;
@@ -124,64 +136,54 @@ switcher.addEventListener("click", () => {
             }
         }
     });
-});
 
-
-const toggleButton = document.getElementById('themeToggle');
-const iconElement = toggleButton.querySelector('.icon'); 
-const body = document.body;
-
-function setTheme(theme) {
-    body.classList.remove('light-theme', 'dark-theme');
-    body.classList.add(theme);
-    localStorage.setItem('theme', theme);
-    if (theme === 'dark-theme') {
-        iconElement.textContent = '☀️';
-        toggleButton.setAttribute('aria-label', 'Включить светлую тему');
-    } else {
-        iconElement.textContent = '🌙';
-        toggleButton.setAttribute('aria-label', 'Включить тёмную тему');
+    // Обновляем текст переключателя языка
+    if (switcher) {
+        switcher.textContent = lang === "en" ? "RU" : "EN";
     }
 }
 
-function getPreferredTheme() {
-    const storedTheme = localStorage.getItem('theme');
-    if (storedTheme) {
-        return storedTheme;
+// Инициализируем язык и модальное окно при загрузке
+document.addEventListener('DOMContentLoaded', function() {
+    // Инициализируем язык
+    switchLanguage();
+
+    // Назначаем обработчик переключения языка
+    if (switcher) {
+        switcher.addEventListener("click", () => {
+            lang = lang === "ru" ? "en" : "ru";
+            switchLanguage();
+        });
     }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark-theme' : 'light-theme';
-}
 
-setTheme(getPreferredTheme());
+    // Инициализируем модальное окно
+    const openBtn = document.getElementById("openScheduleBtn");
+    const modal = document.getElementById("scheduleModal");
+    const closeBtn = modal ? modal.querySelector(".close") : null;
 
-toggleButton.addEventListener('click', () => {
-    
-    iconElement.classList.add('rotate-animation');
-    
-    setTimeout(() => {
-        iconElement.classList.remove('rotate-animation');
-    }, 500); 
+    // Инициализируем табы туров
+    const tourTabs = document.querySelectorAll('.tour-tab');
+    const tourContents = document.querySelectorAll('.tour-content');
 
-    const currentTheme = body.classList.contains('dark-theme') ? 'dark-theme' : 'light-theme';
-    const newTheme = currentTheme === 'dark-theme' ? 'light-theme' : 'dark-theme';
-    setTheme(newTheme);
-});
+    tourTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const tourId = this.getAttribute('data-tour');
 
-// Открытие и закрытие модального окна
-const modal = document.getElementById('scheduleModal');
-const btns = document.querySelectorAll('.card .btn.secondary');
-const closeBtn = document.querySelector('.close');
+            // Убираем активный класс со всех табов и контента
+            tourTabs.forEach(t => t.classList.remove('active'));
+            tourContents.forEach(c => c.classList.remove('active'));
 
-btns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    modal.style.display = 'flex';
-  });
-});
+            // Добавляем активный класс к выбранному табу и контенту
+            this.classList.add('active');
+            const contentEl = document.getElementById(`tour-${tourId}`);
+            if (contentEl) {
+                contentEl.classList.add('active');
+            }
+        });
+    });
 
-closeBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-window.addEventListener('click', e => {
-  if (e.target === modal) modal.style.display = 'none';
+    // По умолчанию открываем первый тур
+    if (tourTabs.length > 0) {
+        tourTabs[0].click();
+    }
 });
