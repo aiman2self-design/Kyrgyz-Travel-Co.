@@ -77,19 +77,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
 
 
-            document.querySelector('nav').classList.remove('active');
+            const nav = document.querySelector('nav');
+            if (nav) {
+                nav.classList.remove('active');
+            }
         }
     });
 });
 
 
-document.getElementById('down').addEventListener('click', function() {
-    window.scrollTo({
-        top: document.body.scrollHeight,
+document.getElementById('goTour').addEventListener('click', function() {
+    document.getElementById('choose-adventure').scrollIntoView({
         behavior: 'smooth'
     });
 });
-
 
 
 
